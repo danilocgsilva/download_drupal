@@ -1,0 +1,8 @@
+Check if download_drupal_bundle not exists.
+    So, check if installfromalias not exists
+        So warns that the operation is possible only if download_drupal_bundle or installfromalias utility exists in the machine
+    Else
+        Uses the installfromalias to download the download_drupal_bundle
+        *Download the drupal
+Else
+    *Downlod the drupal
