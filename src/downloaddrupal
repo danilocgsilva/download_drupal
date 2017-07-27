@@ -5,7 +5,7 @@
 #
 do_downloaddrupal() {
     source $(which downloaddrupalbundle)
-    downloaddrupal_download $1
+    downloaddrupal_download $1 $2
 }
 
 if ! source_downloaddrupal_source=$(which downloaddrupalbundle 2> /dev/null); then
@@ -13,8 +13,8 @@ if ! source_downloaddrupal_source=$(which downloaddrupalbundle 2> /dev/null); th
         echo It is not possible to download Drupal. You need the downloaddrupal_bundle \(https://raw.githubusercontent.com/danilocgsilva/download_drupal_bundle/master/src/downloaddrupal_bundle\) or the installfromalias \(https://raw.githubusercontent.com/danilocgsilva/install_from_alias/master/src/installfromalias\) to proceed.
     else
         installfromalias src download_drupal_bundle downloaddrupalbundle
-        do_downloaddrupal $1
+        do_downloaddrupal $1 $2
     fi
 else
-    do_downloaddrupal $1
+    do_downloaddrupal $1 $2
 fi
